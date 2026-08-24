@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Comunica.gov.ao - Android Client
+  ~
+  ~ SPDX-FileCopyrightText: 2026 IMA
+  ~ SPDX-License-Identifier: GPL-3.0-or-later
+-->
+<!-- Fundo do ícone de lançamento (variante A: fundo branco, logo azul), para
+     acompanhar @mipmap/ic_launcher_foreground em mipmap-anydpi-v26/ic_launcher.xml. -->
+<resources>
+    <color name="ic_launcher_background">#FFFFFF</color>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Comunica.gov.ao - Android Client
+  ~
+  ~ SPDX-FileCopyrightText: 2026 IMA
+  ~ SPDX-License-Identifier: GPL-3.0-or-later
+-->
+<!--
+  Override do flavour comunica (3ª versão do logo, 24 Ago 2026): ícone de
+  lançamento trocado para a variante A do pacote logo-gov-ao-app (fundo
+  branco, logótipo azul) — a variante B anterior (fundo azul, logo branco)
+  ficava com pouco contraste/legibilidade ao tamanho real do ícone no ecrã
+  principal. O fundo passa a @color/ic_launcher_background (branco, ver
+  values/ic_launcher_background.xml), deixando de herdar o gradiente azul
+  de @drawable/ic_launcher_background do main.
+-->
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@color/ic_launcher_background"/>
+    <foreground android:drawable="@mipmap/ic_launcher_foreground"/>
+    <monochrome android:drawable="@mipmap/ic_launcher_monochrome"/>
+</adaptive-icon>
