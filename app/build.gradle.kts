@@ -78,6 +78,7 @@ android {
         buildConfigField("String", "PERMISSION_LOCAL_BROADCAST", "\"$localBroadcastPermission\"")
     }
 
+    flavorDimensions += "brand"
     flavorDimensions += "default"
 
     productFlavors {
@@ -95,6 +96,17 @@ android {
             dimension = "default"
             versionCode = 1
             versionName = "1"
+        }
+
+        // "brand" dimension: keeps upstream identity untouched by default so this
+        // dimension can be merged from upstream without conflicts. Our own brand
+        // lives entirely in app/src/comunica/ (see AGENTS.md rule on flavours).
+        create("nextcloud") {
+            dimension = "brand"
+        }
+        create("comunica") {
+            dimension = "brand"
+            applicationId = "ao.gov.comunica.talk"
         }
     }
 

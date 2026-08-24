@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Comunica.gov.ao - Android Client
+  ~
+  ~ SPDX-FileCopyrightText: 2026 IMA
+  ~ SPDX-License-Identifier: GPL-3.0-or-later
+-->
+<resources>
+    <string name="nc_app_name">Comunica.gov.ao</string>
+    <string name="nc_app_product_name">Comunica.gov.ao</string>
+
+    <!-- TODO(push-proxy): domínio de placeholder. Substituir pelo URL real do
+         push proxy próprio assim que a Fase 2 do checklist estiver concluída
+         (ver memória de projecto "ima-talk-push-proxy-strategy"). Enquanto
+         apontar para um proxy inexistente, as notificações push NÃO chegam. -->
+    <string name="nc_push_server_url" translatable="false">https://push.comunica.gov.ao</string>
+
+    <!-- App de propósito único, ligada a um servidor específico: esconde o
+         fluxo "obter conta com um fornecedor" da Nextcloud. -->
+    <bool name="hide_provider">true</bool>
+    <bool name="is_branded_client">true</bool>
+    <string name="nc_providers_url" translatable="false"></string>
+
+    <!-- Não mantemos SSO/import com a app Nextcloud Files oficial (decisão
+         registada em "ima-talk-brand-identifiers"). -->
+    <string name="nc_import_accounts_from" translatable="false"></string>
+
+    <!-- TODO(legal): substituir por URL real antes de publicar (checklist
+         Fase 5: "Política de privacidade publicada"). -->
+    <string name="nc_privacy_url" translatable="false"></string>
+
+    <!-- Obrigação GPLv3: publicar o código-fonte do fork. Repo real da IMA;
+         confirmar que fica público antes de publicar a app. -->
+    <string name="nc_source_code_url" translatable="false">https://github.com/ima-dev-team/talk-android</string>
+    <string name="nc_talk_android_issues_url" translatable="false">https://github.com/ima-dev-team/talk-android/issues</string>
+
+    <!-- TODO(firebase): estas chaves em app/src/main/res/values/setup.xml são
+         do projecto Firebase da Nextcloud e não vão autenticar contra o nosso
+         applicationId (ao.gov.comunica.talk). Precisam de vir do projecto
+         Firebase próprio (checklist Fase 3) via app/src/gplay/google-services.json
+         mais o equivalente destas strings aqui. Deixadas em branco de propósito
+         para falhar de forma visível em vez de apontar, em silêncio, para a
+         conta da Nextcloud. -->
+    <string name="default_web_client_id" translatable="false"></string>
+    <string name="firebase_database_url" translatable="false"></string>
+    <string name="gcm_defaultSenderId" translatable="false"></string>
+    <string name="google_api_key" translatable="false"></string>
+    <string name="google_app_id" translatable="false"></string>
+    <string name="project_id" translatable="false"></string>
+    <string name="google_crash_reporting_api_key" translatable="false"></string>
+    <string name="google_storage_bucket" translatable="false"></string>
+
+    <!-- TODO(osm): a política de uso do Nominatim/OpenStreetMap exige um
+         contacto real e alcançável. Confirmar endereço antes de publicar. -->
+    <string name="osm_geocoder_contact" translatable="false">suporte@comunica.gov.ao</string>
+</resources>
