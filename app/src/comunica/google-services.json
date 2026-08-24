@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "867423137793",
+    "project_id": "comunica-gov-ao",
+    "storage_bucket": "comunica-gov-ao.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:867423137793:android:6434588bde724598e89000",
+        "android_client_info": {
+          "package_name": "ao.gov.comunica.talk"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEloAngi2TsQ31tjBvPkHlGmGfRjWg8O8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

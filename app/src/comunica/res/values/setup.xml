@@ -34,21 +34,16 @@
     <string name="nc_source_code_url" translatable="false">https://github.com/ima-dev-team/talk-android</string>
     <string name="nc_talk_android_issues_url" translatable="false">https://github.com/ima-dev-team/talk-android/issues</string>
 
-    <!-- TODO(firebase): estas chaves em app/src/main/res/values/setup.xml são
-         do projecto Firebase da Nextcloud e não vão autenticar contra o nosso
-         applicationId (ao.gov.comunica.talk). Precisam de vir do projecto
-         Firebase próprio (checklist Fase 3) via app/src/gplay/google-services.json
-         mais o equivalente destas strings aqui. Deixadas em branco de propósito
-         para falhar de forma visível em vez de apontar, em silêncio, para a
-         conta da Nextcloud. -->
-    <string name="default_web_client_id" translatable="false"></string>
-    <string name="firebase_database_url" translatable="false"></string>
-    <string name="gcm_defaultSenderId" translatable="false"></string>
-    <string name="google_api_key" translatable="false"></string>
-    <string name="google_app_id" translatable="false"></string>
-    <string name="project_id" translatable="false"></string>
-    <string name="google_crash_reporting_api_key" translatable="false"></string>
-    <string name="google_storage_bucket" translatable="false"></string>
+    <!-- gcm_defaultSenderId, google_api_key, google_app_id, project_id,
+         google_crash_reporting_api_key e google_storage_bucket NÃO são
+         definidas aqui: o plugin com.google.gms.google-services gera-as a
+         partir de app/src/comunica/google-services.json (projecto Firebase
+         próprio, comunica-gov-ao) e o resultado vence o merge sobre qualquer
+         valor definido nesta pasta — confirmado a olhar directamente para o
+         merge (app/build/intermediates/.../mergeComunicaGplayDebugResources).
+         default_web_client_id e firebase_database_url também ficam de fora:
+         não existem no google-services.json (este projecto não tem Google
+         Sign-In nem Realtime Database) e o código não as usa em lado nenhum. -->
 
     <!-- TODO(osm): a política de uso do Nominatim/OpenStreetMap exige um
          contacto real e alcançável. Confirmar endereço antes de publicar. -->

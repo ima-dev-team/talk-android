@@ -28,6 +28,8 @@ buildscript {
         classpath 'com.github.spotbugs.snom:spotbugs-gradle-plugin:6.5.4'
         classpath "io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.23.8"
         classpath "org.jlleitschuh.gradle:ktlint-gradle:14.2.0"
+        // comunica flavor only (own Firebase project for FCM push) — see app/src/comunica/google-services.json
+        classpath "com.google.gms:google-services:4.5.0"
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }

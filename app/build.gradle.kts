@@ -15,6 +15,7 @@ plugins {
     id("com.android.legacy-kapt")
     id("com.google.devtools.ksp") version "2.3.8"
     id("com.android.application")
+    id("com.google.gms.google-services")
     id("kotlin-parcelize")
     id("com.github.spotbugs")
     id("io.gitlab.arturbosch.detekt")
