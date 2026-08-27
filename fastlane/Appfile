@@ -1,2 +1,2 @@
-json_key_file "~/.gradle/fastlane.json"
-package_name "com.nextcloud.talk2"
+json_key_file "~/Keys/comunica-play-publisher.json"
+package_name "ao.gov.comunica.talk"

@@ -20,3 +20,15 @@ lane :uploadAlphaToPlayStore do |options|
         apk: "/home/androiddaily/apks-talk/android-talk-" + options[:version] + ".apk",
     )
 end
+
+desc "Upload Comunica GOV.AO release bundle to Play Console internal testing track"
+lane :uploadComunicaInternal do
+    upload_to_play_store(
+        track: 'internal',
+        aab: 'app/build/outputs/bundle/comunicaGplayRelease/app-comunica-gplay-release.aab',
+        skip_upload_images: true,
+        skip_upload_screenshots: true,
+        skip_upload_changelogs: true,
+        skip_upload_metadata: true,
+    )
+end
