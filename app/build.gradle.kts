@@ -44,6 +44,18 @@ val media3Version = "1.10.1"
 val coroutinesVersion = "1.11.0"
 val mockitoKotlinVersion = "6.3.0"
 
+// Assinatura de release do flavor `comunica` (Play Store). Lida de
+// ~/.gradle/gradle.properties (nunca do repo) para que o keystore de upload
+// nunca seja commitado nem exista em texto simples dentro do projecto — ver
+// ~/Keys/comunica-upload-key.credentials.txt para os valores reais. Em
+// qualquer máquina sem estas properties definidas (outro contribuidor, CI
+// sem segredos), a assinatura de release simplesmente não é aplicada e o
+// build continua a funcionar (produz um APK/AAB de release não assinado).
+val comunicaUploadStoreFile: String? = providers.gradleProperty("COMUNICA_UPLOAD_STORE_FILE").orNull
+val comunicaUploadStorePassword: String? = providers.gradleProperty("COMUNICA_UPLOAD_STORE_PASSWORD").orNull
+val comunicaUploadKeyAlias: String? = providers.gradleProperty("COMUNICA_UPLOAD_KEY_ALIAS").orNull
+val comunicaUploadKeyPassword: String? = providers.gradleProperty("COMUNICA_UPLOAD_KEY_PASSWORD").orNull
+
 android {
     compileSdk = 36
 
@@ -79,6 +91,17 @@ android {
         buildConfigField("String", "PERMISSION_LOCAL_BROADCAST", "\"$localBroadcastPermission\"")
     }
 
+    signingConfigs {
+        if (comunicaUploadStoreFile != null) {
+            create("comunicaRelease") {
+                storeFile = file(comunicaUploadStoreFile)
+                storePassword = comunicaUploadStorePassword
+                keyAlias = comunicaUploadKeyAlias
+                keyPassword = comunicaUploadKeyPassword
+            }
+        }
+    }
+
     flavorDimensions += "brand"
     flavorDimensions += "default"
 
@@ -108,6 +131,9 @@ android {
         create("comunica") {
             dimension = "brand"
             applicationId = "ao.gov.comunica.talk"
+            if (comunicaUploadStoreFile != null) {
+                signingConfig = signingConfigs.getByName("comunicaRelease")
+            }
         }
     }
 

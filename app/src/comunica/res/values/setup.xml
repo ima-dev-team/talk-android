@@ -9,10 +9,8 @@
     <string name="nc_app_name">Comunica.gov.ao</string>
     <string name="nc_app_product_name">Comunica.gov.ao</string>
 
-    <!-- TODO(push-proxy): domínio de placeholder. Substituir pelo URL real do
-         push proxy próprio assim que a Fase 2 do checklist estiver concluída
-         (ver memória de projecto "ima-talk-push-proxy-strategy"). Enquanto
-         apontar para um proxy inexistente, as notificações push NÃO chegam. -->
+    <!-- Push proxy próprio, validado ponta-a-ponta em produção (27 Ago 2026) —
+         ver memória de projecto "ima-talk-push-proxy-nc-server-not-dispatching". -->
     <string name="nc_push_server_url" translatable="false">https://push.comunica.gov.ao</string>
 
     <!-- App de propósito único, ligada a um servidor específico: esconde o
