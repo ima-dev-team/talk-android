@@ -6,8 +6,8 @@
   ~ SPDX-License-Identifier: GPL-3.0-or-later
 -->
 <resources>
-    <string name="nc_app_name">Comunica.gov.ao</string>
-    <string name="nc_app_product_name">Comunica.gov.ao</string>
+    <string name="nc_app_name">Talk gov.ao</string>
+    <string name="nc_app_product_name">Talk gov.ao</string>
 
     <!-- Push proxy próprio, validado ponta-a-ponta em produção (27 Ago 2026) —
          ver memória de projecto "ima-talk-push-proxy-nc-server-not-dispatching". -->
