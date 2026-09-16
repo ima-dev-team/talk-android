@@ -25,7 +25,7 @@
 
     <!-- TODO(legal): substituir por URL real antes de publicar (checklist
          Fase 5: "Política de privacidade publicada"). -->
-    <string name="nc_privacy_url" translatable="false"></string>
+    <string name="nc_privacy_url" translatable="false">https://github.com/ima-dev-team/talk-android/blob/branding/PRIVACY.md</string>
 
     <!-- Obrigação GPLv3: publicar o código-fonte do fork. Repo real da IMA;
          confirmar que fica público antes de publicar a app. -->
