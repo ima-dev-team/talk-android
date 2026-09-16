@@ -445,6 +445,7 @@
     <string name="nc_sent_an_image" formatted="true">%1$s enviou uma imagem.</string>
     <string name="nc_sent_an_image_you">Você enviou uma imagem.</string>
     <string name="nc_server_connect">Testar conexão ao servidor</string>
+    <string name="nc_server_login_button">Entrar</string>
     <string name="nc_server_db_upgrade_needed">Atualize seu banco de dados %1$s</string>
     <string name="nc_server_failed_to_import_account">Não foi possível importar a conta selecionada</string>
     <string name="nc_server_helper_text">O caminho para a sua %1$s interface web quando abre no seu navegador.</string>

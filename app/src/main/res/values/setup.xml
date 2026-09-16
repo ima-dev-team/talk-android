@@ -23,6 +23,10 @@
     <bool name="hide_auth_cert">false</bool>
     <bool name="multiaccount_support">true</bool>
     <string name="weblogin_url" translatable="false"></string>
+    <!-- When weblogin_url is set, whether ServerSelectionActivity should submit it
+         automatically on open (upstream default) or just pre-fill it and let the
+         user decide between the connect button and the QR scan option. -->
+    <bool name="weblogin_url_auto_submit">true</bool>
     <!-- Flags to auto enable/disable some features -->
     <bool name="is_branded_client">false</bool>
 

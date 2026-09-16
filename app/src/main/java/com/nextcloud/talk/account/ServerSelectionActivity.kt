@@ -117,7 +117,16 @@ class ServerSelectionActivity : BaseActivity() {
         binding.serverEntryTextInputEditText.requestFocus()
         if (!TextUtils.isEmpty(resources!!.getString(R.string.weblogin_url))) {
             binding.serverEntryTextInputEditText.setText(resources!!.getString(R.string.weblogin_url))
-            checkServerAndProceed()
+            if (resources!!.getBoolean(R.bool.weblogin_url_auto_submit)) {
+                checkServerAndProceed()
+            } else {
+                // Server is fixed for this build: replace the free-text field with a plain
+                // login button, mirroring LoginViewController's "Log in" button on iOS.
+                binding.serverEntryTextInputLayout.visibility = View.GONE
+                binding.hostUrlInputHelperText.visibility = View.GONE
+                binding.connectButton.visibility = View.VISIBLE
+                binding.connectButton.setOnClickListener { checkServerAndProceed() }
+            }
         }
         binding.serverEntryTextInputEditText.setOnEditorActionListener { _: TextView?, i: Int, _: KeyEvent? ->
             if (i == EditorInfo.IME_ACTION_DONE) {

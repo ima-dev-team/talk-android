@@ -95,7 +95,7 @@ class MainActivity :
     }
 
     private fun launchServerSelection() {
-        if (isBrandingUrlSet()) {
+        if (isBrandingUrlSet() && resources.getBoolean(R.bool.weblogin_url_auto_submit)) {
             val intent = Intent(context, BrowserLoginActivity::class.java)
             val bundle = Bundle()
             bundle.putString(BundleKeys.KEY_BASE_URL, resources.getString(R.string.weblogin_url))

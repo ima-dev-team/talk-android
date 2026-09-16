@@ -19,12 +19,20 @@
     <bool name="is_branded_client">true</bool>
     <string name="nc_providers_url" translatable="false"></string>
 
+    <!-- Servidor único da app (equivalente ao "domain"/forceDomain do iOS,
+         ver NCAppBranding.m): weblogin_url pré-preenche o ecrã de "Endereço
+         do servidor" em ServerSelectionActivity, pelo que o utilizador nunca
+         precisa de o escrever manualmente. weblogin_url_auto_submit=false
+         mantém o ecrã visível em vez de avançar sozinho, para o utilizador
+         poder escolher entre o botão de avançar e o leitor de QR (tal como
+         o LoginViewController do iOS mostra "Entrar" e "Scan QR code"). -->
+    <string name="weblogin_url" translatable="false">https://gov.ao</string>
+    <bool name="weblogin_url_auto_submit">false</bool>
+
     <!-- Não mantemos SSO/import com a app Nextcloud Files oficial (decisão
          registada em "ima-talk-brand-identifiers"). -->
     <string name="nc_import_accounts_from" translatable="false"></string>
 
-    <!-- TODO(legal): substituir por URL real antes de publicar (checklist
-         Fase 5: "Política de privacidade publicada"). -->
     <string name="nc_privacy_url" translatable="false">https://github.com/ima-dev-team/talk-android/blob/branding/PRIVACY.md</string>
 
     <!-- Obrigação GPLv3: publicar o código-fonte do fork. Repo real da IMA;
